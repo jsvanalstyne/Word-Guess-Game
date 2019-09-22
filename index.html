@@ -14,10 +14,11 @@
 <body class="p-3 mb-2 bg-info text-white ">
     <div class="container ">
             <div class="row">
-                    <div class="col dotted">
-                        <h1 id= "boyband">Boy Band Word Guess</h1>
+                    <div class="col">
+                        <h1 id= "hangman">Hangman</h1>
+                        <h2 id="boyband" >Boy Band Takeover</h2>
     </div>
-    <div class="container">
+    <div class="container bigcontainer">
         <div class="row">
             <div class="col dotted">
                     <img id="cd-image" src="https://www.edmtunes.com/wp-content/uploads/2018/02/JunctionRecordsCDs-1.jpg" alt ="CD image" class="rounded">
@@ -25,13 +26,13 @@
             <div class="col dotted info">
                 <h4>Press any key to begin!</h4>
                 <p></p>
-                <h4>Wins:</h4>
+                <h4 id="wins">Wins:</h4>
                 <p></p>
-                <h4>Current Word:</h4>
+                <h4 id="current-word">Current Word:</h4>
                 <p></p>
-                <h4>Number of Guesses Remaining:</h4>
+                <h4 id="number of guesses">Number of Guesses Remaining:</h4>
                 <p></p>
-                <h4>Letters Already Guessed:</h4>
+                <h4 id="letters-guessed">Letters Already Guessed:</h4>
 
 
             </div>
@@ -40,7 +41,12 @@
 
 
     <script type="text/javascript">
-    
+
+    // create variables for wins, number of guesses, puzzle/band options, letter guessed
+    // create listener for user input
+    document.onkeyup(event){
+
+    }
     
     
     
