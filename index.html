@@ -41,10 +41,18 @@
 
 
     <script type="text/javascript">
-
+    var wins = 0;
+    var numberGuesses= 10;
+    var letterGuessed= [];
+    var bands= 
+    // var bandOptions:
     // create variables for wins, number of guesses, puzzle/band options, letter guessed
+    // Create a random selected band for user to guess
+    var bandSelection= Math.floor(Math.random())
     // create listener for user input
-    document.onkeyup(event){
+    document.onkeyup= function(event){
+        var userGuess= event.key;
+        
 
     }
     
