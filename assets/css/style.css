@@ -1,5 +1,11 @@
 .dotted {
-    border: 10px dotted white;
+    border: 10px dotted black;
+}
+
+body{
+    background: blueviolet;
+    color: black;
+
 }
 
 #hangman { 
@@ -23,6 +29,7 @@
     font-family: fantasy;
     margin-bottom: 30px;
     transform: rotateZ(-10deg);
+    
    
 
 
@@ -32,6 +39,7 @@
     overflow: auto;
     font-size: 20px;
 
+
 }
 #cd-image {
     width:80%;
@@ -40,6 +48,7 @@
     margin-top: 30px;
     padding: 10px;
     overflow: auto;
+    background: white;
 
 
 
