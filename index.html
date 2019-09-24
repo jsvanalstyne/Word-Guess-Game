@@ -49,6 +49,7 @@
     <script type="text/javascript">
     // Create a variable for wins
     var wins = 0;
+    document.getElementById("wins").innerHTML= "Wins: " + wins;
     // create a variable for remaining guesses
     var remainingGuesses= 20;
     // Create an array of songs for the user to guess
@@ -90,13 +91,16 @@ document.getElementById("answer-space").innerHTML = answerSpace;
         if(lettersGuessed.includes(userGuess)) {
                 return;
         }
-        // Push guessed letters to the "lettersGuesssed" array
+        // compare userGuess to characters in the selected sitcom, if correct...
        if(userGuess === sitcomSelection){
-           
-           
+       }
+       if(userGuess !== sitcomeSelection){
+          // Push guessed letters to the "lettersGuesssed" array 
            lettersGuessed.push(userGuess);
     document.getElementById("letters-guessed").innerHTML= "Letters Guessed: " +lettersGuessed;
-        console.log("lettersgussed");
+        remainingGuesses --;
+
+        console.log("lettersguessed");}
 
 
 
