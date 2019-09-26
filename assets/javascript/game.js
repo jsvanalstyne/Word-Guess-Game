@@ -11,12 +11,13 @@ var themeSongs= [
     "THE OFFICE",
     "SEINFELD",
 ];
+// Create an array for letters guessed captured from user's email
 var lettersGuessed= [];
-// Randomly choose a sticom from the array above
+// Create an empty string variable for random selected sitcom
 var sitcomSelection = "";
-// Create blank spaces representing each character to be guesed
+// Create an array of blank spaces representing each character to be guesed
 var answerSpace = [];
-
+// Function used to reset game by clearing arrays, restarting the amount of gusses and allowing for spaces between string words
 function resetGame(){
 answerSpace=[];
 lettersGuessed=[];
@@ -45,9 +46,9 @@ document.onkeyup= function(event){
     if(lettersGuessed.includes(userGuess)) {
             return;
     }
-    // 
+    // create variable that is set to false that dictates what to do after userGuess has been compared. 
     var correctGuess = false;
-   
+   // compare userGuess to characters in the selected sitcom, if correct...
     for(var i=0; i<sitcomSelection.length; i++){
         if(userGuess === sitcomSelection.charAt(i)){
            answerSpace[i] = userGuess;
@@ -57,73 +58,22 @@ document.onkeyup= function(event){
     lettersGuessed.push(userGuess);
     document.getElementById("letters-guessed").innerHTML= "Letters Guessed: " +lettersGuessed.join(" ");
     console.log("lettersguessed");  
+    // removes the commas between letters in the string
     document.getElementById("answer-space").innerHTML = answerSpace.join(" ");
-    // compare userGuess to characters in the selected sitcom, if correct...
-  
-   if(!correctGuess){
-    // Push guessed letters to the "lettersGuesssed" array        
-      remainingGuesses --;       
-
-    if(remainingGuesses<=0){
-        resetGame();
-        
-    }
-} else if(answerSpace.join("")===sitcomSelection){
+    
+//   Do this if the userGuess what not correct
+   if(!correctGuess){    
+        remainingGuesses --;     
+    // If remaining guesses are less than 0 do this
+        if(remainingGuesses<=0){
+            resetGame();        
+        }
+        // Reset Game if user wins (no more blank spaces left)
+    } else if(answerSpace.join("")===sitcomSelection){
     wins ++;
     resetGame();    
-}
+    }
     
 }
 
 resetGame();
-
-
-
-
-
-// }
-// If the character is correct, display the character in the correct position
-// If the chracter is incorrect, display the character under letters-guessed
-// This repeats until all characters are selected or the user depletes all guesses
-// When the user gets the theme song correct or depletes all guesses --> the song is played, image changes to corresponding theme image and title of sitcom is displayed, new sitcom title is displayed
-// After image and song are displayed, using a function clear the remaining guesses and letters guessed
-// 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     // Create a variable to display wins
-//     var winsText = document.getElementById("wins");
-//     // Create a variable to display the empyt spaces for the user to guess
-//     var answerSpaceText = document.getElementById("answer-space");
-//     // create a variable to display the remaining guesses
-//     var remainingGuessesText= document.getElementById("remaining-guesses");
-//     // create an array for the user's incorrect guesses 
-//     var previousGuess = [];
-
-
-//     // Create a listener
-//     document.onkeyup= function(event){
-//         var userGuess= event.key;
-//         if(previousGuess.includes(userGuess)) {
-//   return;
-// }
-// previousGuess.push(userGuess);
-//   
-
-
-
-
-
-
