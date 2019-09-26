@@ -5,12 +5,39 @@ var wins = 0;
 {/* // create a variable for remaining guesses */}
 var remainingGuesses= 20;
 // Create an array of songs for the user to guess
-var themeSongs= [
-    "FRIENDS",
-    "GOLDEN GIRLS",
-    "THE OFFICE",
-    "SEINFELD",
+// var themeSongs= [
+//     "FRIENDS",
+//     "GOLDEN GIRLS",
+//     "THE OFFICE",
+//     "SEINFELD",
+// ];
+var themeSongs = [
+    {
+        name: "FRIENDS",
+        image: "friends.jpg",
+        song: "friends.mp3"
+    },
+    {
+        name: "GOLDEN GIRLS",
+        image: "golden_girls.jpg",
+        song: "golden_girls.mp3"
+    },
+    {
+        name: "THE OFFICE",
+        image: "the_office.jpg",
+        song: "the_office.mp3"
+    },
+    {
+        name: "SEINFELD",
+        image: "seinfeld.jpg",
+        song: "seinfeld.mp3"
+    }
 ];
+
+funciton replaceImageSong(){
+    document.getElementById("cd-image").setAttribute("src", sitcomSelection.image)
+    
+}
 // Create an array for letters guessed captured from user's email
 var lettersGuessed= [];
 // Create an empty string variable for random selected sitcom
@@ -23,7 +50,7 @@ answerSpace=[];
 lettersGuessed=[];
 remainingGuesses = 20;
 sitcomSelection = themeSongs[Math.floor(Math.random()*themeSongs.length)];
-for(var i=0; i<sitcomSelection.length; i++){
+for(var i=0; i<sitcomSelection.name.length; i++){
     if(sitcomSelection[i]===" "){
         answerSpace.push(" ");
     } else{ 
@@ -49,8 +76,8 @@ document.onkeyup= function(event){
     // create variable that is set to false that dictates what to do after userGuess has been compared. 
     var correctGuess = false;
    // compare userGuess to characters in the selected sitcom, if correct...
-    for(var i=0; i<sitcomSelection.length; i++){
-        if(userGuess === sitcomSelection.charAt(i)){
+    for(var i=0; i<sitcomSelection.name.length; i++){
+        if(userGuess === sitcomSelection.name.charAt(i)){
            answerSpace[i] = userGuess;
            correctGuess= true;
         }
@@ -69,7 +96,7 @@ document.onkeyup= function(event){
             resetGame();        
         }
         // Reset Game if user wins (no more blank spaces left)
-    } else if(answerSpace.join("")===sitcomSelection){
+    } else if(answerSpace.join("")===sitcomSelection.name){
     wins ++;
     resetGame();    
     }
