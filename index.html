@@ -10,6 +10,7 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
 </head>
 <body>
     <div class="container ">
@@ -44,123 +45,8 @@
             </div>
         </div>
     </div>
-
-
-    <script type="text/javascript">
-    // Create a variable for wins
-    var wins = 0;
-    document.getElementById("wins").innerHTML= "Wins: " + wins;
-    // create a variable for remaining guesses
-    var remainingGuesses= 20;
-    // Create an array of songs for the user to guess
-    var themeSongs= [
-        "FRIENDS",
-        "GOLDEN GIRLS",
-        "THE OFFICE",
-        "SEINFELD",
-    ];
-    var lettersGuessed= [];
-    var themeSongIndex=0;
-// Randomly choose a sticom from the array above
-var sitcomSelection = themeSongs[Math.floor(Math.random()*themeSongs.length)];
-console.log("sitcom");
-// Create blank spaces representing each character to be guesed
-var answerSpace = [];
-    for(var i=0; i<sitcomSelection.length; i++){
-        answerSpace[i]= "_";
-        console.log("space");
-    }
-
-// Display the randomly selected sitcom using spaces
-document.getElementById("answer-space").innerHTML = answerSpace;
-
-// var 
-
-// function resetGame(){
-//     for(var i=0; i<sitcomSelection.length; i++){
-//         answerSpace[i]= "_";}
-//         remainingGuesses = 20;
-// }
-
-// User inputs a letter guess
-    document.onkeyup= function(event){
-    // create user variable and change to upper case regardless of input
-        var userGuess= event.key.toUpperCase();
-        // Do not allow for repeat guesses of the same letter
-
-        if(lettersGuessed.includes(userGuess)) {
-                return;
-        }
-        // compare userGuess to characters in the selected sitcom, if correct...
-       if(userGuess === sitcomSelection){
-       }
-       if(userGuess !== sitcomeSelection){
-          // Push guessed letters to the "lettersGuesssed" array 
-           lettersGuessed.push(userGuess);
-    document.getElementById("letters-guessed").innerHTML= "Letters Guessed: " +lettersGuessed;
-        remainingGuesses --;
-
-        console.log("lettersguessed");}
-
-
-
-
-    
-}
-
-
-
-
-
- 
-// }
-// If the character is correct, display the character in the correct position
-// If the chracter is incorrect, display the character under letters-guessed
-// This repeats until all characters are selected or the user depletes all guesses
-// When the user gets the theme song correct or depletes all guesses --> the song is played, image changes to corresponding theme image and title of sitcom is displayed, new sitcom title is displayed
-// After image and song are displayed, using a function clear the remaining guesses and letters guessed
-// 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//     // Create a variable to display wins
-//     var winsText = document.getElementById("wins");
-//     // Create a variable to display the empyt spaces for the user to guess
-//     var answerSpaceText = document.getElementById("answer-space");
-//     // create a variable to display the remaining guesses
-//     var remainingGuessesText= document.getElementById("remaining-guesses");
-//     // create an array for the user's incorrect guesses 
-//     var previousGuess = [];
    
 
-//     // Create a listener
-//     document.onkeyup= function(event){
-//         var userGuess= event.key;
-//         if(previousGuess.includes(userGuess)) {
-//   return;
-// }
-// previousGuess.push(userGuess);
-//   
-    
-    
-
-    
-    
-    
-    
-    
-    </script>
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
 </body>
 </html>
