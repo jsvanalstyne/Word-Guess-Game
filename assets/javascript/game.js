@@ -31,6 +31,16 @@ var themeSongs = [
         name: "SEINFELD",
         image: "assets/images/seinfeld.jpg",
         song: "seinfeld.mp3"
+    },
+    {
+        name: "CHEERS",
+        image: "assets/images/cheers.jpg",
+        song: "seinfeld.mp3"
+    },
+    {
+        name: "MASH",
+        image: "assets/images/mash.jpg",
+        song: "seinfeld.mp3"
     }
 ];
 
