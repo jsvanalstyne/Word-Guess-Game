@@ -5,11 +5,7 @@ var wins = 0;
 {/* // create a variable for remaining guesses */}
 var remainingGuesses= 20;
 // Create an array of songs for the user to guess
-// var themeSongs= [
-//     "FRIENDS",
-//     "GOLDEN GIRLS",
-//     "THE OFFICE",
-//     "SEINFELD",
+// 
 // ];
 var themeSongs = [
     {
@@ -47,7 +43,7 @@ var themeSongs = [
     function replaceImageSong(){
     document.getElementById("cd-image").setAttribute("src", sitcomSelection.image);
     document.getElementById("songPlay").setAttribute("src", sitcomSelection.song);
-    document.getElementById("bandDisplay").replaceWith(sitcomSelection.name);
+    document.getElementById("bandDisplay").innerHTML= sitcomSelection.name;
     
 }
 // Create an array for letters guessed captured from user's email
@@ -74,6 +70,7 @@ document.getElementById("answer-space").innerHTML = answerSpace.join(" ");
 document.getElementById("wins").innerHTML= "Wins: " + wins;
 document.getElementById("letters-guessed").innerHTML= "Letters Guessed: " +lettersGuessed;   
 document.getElementById("remaining-guesses").innerHTML = "Guesses Remaining: " + remainingGuesses;   
+
            
 }
 
