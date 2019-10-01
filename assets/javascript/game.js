@@ -14,28 +14,29 @@ var remainingGuesses= 20;
 var themeSongs = [
     {
         name: "FRIENDS",
-        image: "friends.jpg",
+        image: "assets/images/friends.jpg",
         song: "friends.mp3"
     },
     {
         name: "GOLDEN GIRLS",
-        image: "golden_girls.jpg",
+        image: "assets/images/golden_girls.jpg",
         song: "golden_girls.mp3"
     },
     {
         name: "THE OFFICE",
-        image: "the_office.jpg",
+        image: "assets/images/the_office.jpg",
         song: "the_office.mp3"
     },
     {
         name: "SEINFELD",
-        image: "seinfeld.jpg",
+        image: "assets/images/seinfeld.jpg",
         song: "seinfeld.mp3"
     }
 ];
 
-funciton replaceImageSong(){
-    document.getElementById("cd-image").setAttribute("src", sitcomSelection.image)
+    function replaceImageSong(){
+    document.getElementById("cd-image").setAttribute("src", sitcomSelection.image);
+    document.getElementById("songPlay").setAttribute("src", sitcomSelection.song)
     
 }
 // Create an array for letters guessed captured from user's email
@@ -60,7 +61,8 @@ for(var i=0; i<sitcomSelection.name.length; i++){
 // Display the randomly selected sitcom using spaces
 document.getElementById("answer-space").innerHTML = answerSpace.join(" ");
 document.getElementById("wins").innerHTML= "Wins: " + wins;
-document.getElementById("letters-guessed").innerHTML= "Letters Guessed: " +lettersGuessed;      
+document.getElementById("letters-guessed").innerHTML= "Letters Guessed: " +lettersGuessed;   
+document.getElementById("remaining-guesses").innerHTML = "Guesses Remaining: " + remainingGuesses;   
            
 }
 
@@ -90,17 +92,19 @@ document.onkeyup= function(event){
     
 //   Do this if the userGuess what not correct
    if(!correctGuess){    
-        remainingGuesses --;     
+        remainingGuesses--;     
     // If remaining guesses are less than 0 do this
         if(remainingGuesses<=0){
-            resetGame();        
+                 replaceImageSong();
         }
         // Reset Game if user wins (no more blank spaces left)
     } else if(answerSpace.join("")===sitcomSelection.name){
     wins ++;
-    resetGame();    
+       replaceImageSong();
+       resetGame();
     }
-    
-}
+    document.getElementById("remaining-guesses").innerHTML = "Guesses Remaining: " + remainingGuesses;   
+           
 
+}
 resetGame();
