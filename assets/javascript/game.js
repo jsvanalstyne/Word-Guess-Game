@@ -15,38 +15,39 @@ var themeSongs = [
     {
         name: "FRIENDS",
         image: "assets/images/friends.jpg",
-        song: "friends.mp3"
+        song: "assets/images/friends.mp3"
     },
     {
         name: "GOLDENGIRLS",
         image: "assets/images/golden_girls.jpg",
-        song: "golden_girls.mp3"
+        song: "assets/images/golden_girls.mp3"
     },
     {
         name: "THEOFFICE",
         image: "assets/images/the_office.jpg",
-        song: "the_office.mp3"
+        song: "assets/images/the_office.mp3"
     },
     {
         name: "SEINFELD",
         image: "assets/images/seinfeld.jpg",
-        song: "seinfeld.mp3"
+        song: "assets/images/seinfeld.mp3"
     },
     {
         name: "CHEERS",
         image: "assets/images/cheers.jpg",
-        song: "seinfeld.mp3"
+        song: "assets/images/cheers.mp3"
     },
     {
         name: "MASH",
         image: "assets/images/mash.jpg",
-        song: "seinfeld.mp3"
+        song: "assets/images/mash.mp3"
     }
 ];
 
     function replaceImageSong(){
     document.getElementById("cd-image").setAttribute("src", sitcomSelection.image);
-    document.getElementById("songPlay").setAttribute("src", sitcomSelection.song)
+    document.getElementById("songPlay").setAttribute("src", sitcomSelection.song);
+    document.getElementById("bandDisplay").replaceWith(sitcomSelection.name);
     
 }
 // Create an array for letters guessed captured from user's email
