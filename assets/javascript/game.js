@@ -18,12 +18,12 @@ var themeSongs = [
         song: "friends.mp3"
     },
     {
-        name: "GOLDEN GIRLS",
+        name: "GOLDENGIRLS",
         image: "assets/images/golden_girls.jpg",
         song: "golden_girls.mp3"
     },
     {
-        name: "THE OFFICE",
+        name: "THEOFFICE",
         image: "assets/images/the_office.jpg",
         song: "the_office.mp3"
     },
