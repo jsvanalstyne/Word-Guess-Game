@@ -42,7 +42,9 @@ var themeSongs = [
 
     function replaceImageSong(){
     document.getElementById("cd-image").setAttribute("src", sitcomSelection.image);
-    document.getElementById("songPlay").setAttribute("src", sitcomSelection.song);
+    var songPlay = document.getElementById("songPlay"); 
+    songPlay.setAttribute("src", sitcomSelection.song);
+    songPlay.play();
     document.getElementById("bandDisplay").innerHTML= sitcomSelection.name;
     
 }
