@@ -26,7 +26,7 @@ var themeSongs = [
     {
         name: "SEINFELD",
         image: "assets/images/seinfeld.jpg",
-        song: "assets/images/seinfeld.mp3"
+        song: "assets/images/seindfeld.mp3"
     },
     {
         name: "CHEERS",
