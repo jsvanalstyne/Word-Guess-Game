@@ -26,7 +26,7 @@ var themeSongs = [
     {
         name: "SEINFELD",
         image: "assets/images/seinfeld.jpg",
-        song: "assets/images/seindfeld.mp3"
+        song: "assets/images/seinfeld.mp3"
     },
     {
         name: "CHEERS",
@@ -37,6 +37,16 @@ var themeSongs = [
         name: "MASH",
         image: "assets/images/mash.jpg",
         song: "assets/images/mash.mp3"
+    },
+    {
+        name: "FRESHPRINCE",
+        image: "assets/images/freshprince.jpg",
+        song: "assets/images/freshprince.mp3"
+    },
+    {
+        name: "BEWITCHED",
+        image: "assets/images/bewitched.jpg",
+        song: "assets/images/bewitched.mp3"
     }
 ];
 
