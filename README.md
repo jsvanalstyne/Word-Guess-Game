@@ -11,7 +11,7 @@ Once the page loads, tiles based on the number of characters in the title will a
 
 ## Built with
 
--HTML
--CSS
--JavaScript
+- HTML
+- CSS
+- JavaScript
 
